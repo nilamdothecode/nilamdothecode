@@ -40,19 +40,6 @@
   --nav-bg: rgba(240,250,245,0.95);
   --hero-bg: #1B7A5A;
 }
-[data-color="purple"] {
-  --accent: #7B5EA7;
-  --accent2: #FFE034;
-  --accent-text: #ffffff;
-  --bg: #F7F3FF;
-  --bg2: #EDE5FF;
-  --text: #1a1a1a;
-  --text-muted: #6b5a8a;
-  --card-bg: #ffffff;
-  --border: rgba(200,180,232,0.25);
-  --nav-bg: rgba(247,243,255,0.95);
-  --hero-bg: #7B5EA7;
-}
 
 html { scroll-behavior: smooth; }
 
