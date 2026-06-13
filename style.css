@@ -103,6 +103,15 @@ em { font-style: italic; color: var(--accent2); }
 .nav-link:hover, .nav-link.active { color: var(--accent); }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
 
+/* NAVBAR AT TOP (over colored hero) — light text */
+.navbar:not(.scrolled) .nav-logo { color: #fff; }
+.navbar:not(.scrolled) .nav-link { color: rgba(255,255,255,0.7); }
+.navbar:not(.scrolled) .nav-link:hover,
+.navbar:not(.scrolled) .nav-link.active { color: #fff; }
+.navbar:not(.scrolled) .nav-link::after { background: var(--accent2); }
+.navbar:not(.scrolled) .hamburger span { background: #fff; }
+.navbar:not(.scrolled) .swatch.active { border-color: #fff; }
+
 /* COLOR SWITCHER */
 .color-switcher { display: flex; align-items: center; gap: 7px; }
 .swatch {
@@ -358,6 +367,7 @@ em { font-style: italic; color: var(--accent2); }
   .nav-links.open { display: flex; }
   .nav-links li { width: 100%; text-align: center; border-bottom: 1px solid var(--border); }
   .nav-link { display: block; padding: 1.5rem; font-size: 1.2rem; color: var(--text); }
+  .nav-links.open .nav-link { color: var(--text); }
   .nav-link::after { display: none; }
   .hamburger { display: flex; z-index: 200; }
   .section { padding: 5rem 6%; }
