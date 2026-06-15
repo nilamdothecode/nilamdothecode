@@ -12,62 +12,85 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <a href="#hero" class="nav-logo">nilamdothecode</a>
+
     <div class="nav-right">
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about" class="nav-link" data-text="About Me">About Me</a></li>
-        <li><a href="#work" class="nav-link" data-text="Work">Work</a></li>
+        <li><a href="#about"   class="nav-link" data-text="About Me">About Me</a></li>
+        <li><a href="#work"    class="nav-link" data-text="Work">Work</a></li>
         <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
       </ul>
+
       <div class="color-switcher" id="color-switcher">
-        <button class="swatch active" data-color="sand" style="background:#FAF8F3; border:1.5px solid #ccc" aria-label="White Sand"></button>
-        <button class="swatch" data-color="orange" style="background:#FF5C00" aria-label="Orange"></button>
-        <button class="swatch" data-color="green" style="background:#1B7A5A" aria-label="Green"></button>
+        <button class="swatch active" data-color="sand"   style="background:#FAF8F3; border:1.5px solid #ccc" aria-label="White Sand"></button>
+        <button class="swatch"        data-color="orange" style="background:#FF5C00"                          aria-label="Orange"></button>
+        <button class="swatch"        data-color="green"  style="background:#1B7A5A"                          aria-label="Green"></button>
       </div>
+
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
     <div class="hero-content">
       <p class="hero-eyebrow reveal-text">developer · creator</p>
-      <h1 class="hero-greeting reveal-text" style="transition-delay:0.1s">
+
+      <h1 class="hero-greeting reveal-text" style="transition-delay: 0.1s">
         i'm <span class="wave">👋</span>
       </h1>
-      <div class="hero-name-wrap reveal-text" style="transition-delay:0.2s">
+
+      <div class="hero-name-wrap reveal-text" style="transition-delay: 0.2s">
         <span class="hero-name-hand">Nilam R.</span>
         <div class="hero-underline"></div>
       </div>
-      <p class="hero-tagline reveal-text" style="transition-delay:0.35s">
+
+      <p class="hero-tagline reveal-text" style="transition-delay: 0.35s">
         i build clean, working code from scratch.
       </p>
-      <a href="#work" class="btn-primary reveal-text" style="transition-delay:0.5s">Check It Out ↓</a>
+
+      <a href="#work" class="btn-primary reveal-text" style="transition-delay: 0.5s">
+        Check It Out ↓
+      </a>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ===== ABOUT ===== -->
   <section class="section section-statement" id="about">
     <div class="container">
       <span class="section-label reveal">About</span>
-      <h2 class="statement reveal" style="transition-delay:0.05s">
-        <span class="brand">nilamdothecode</span> is a one-man army specialized in <em>web</em>, <em>systems</em> &amp; <em>IoT</em>. Based in Malaysia.
+
+      <h2 class="statement reveal" style="transition-delay: 0.05s">
+        <span class="brand">nilamdothecode</span> is a one-man army specialized in
+        <em>web</em>, <em>systems</em> &amp; <em>IoT</em>. Based in Malaysia.
       </h2>
-      <p class="statement-sub reveal" style="transition-delay:0.2s">I build things from scratch and care about clean code that just works — no bloat, no fuss.</p>
+
+      <p class="statement-sub reveal" style="transition-delay: 0.2s">
+        I build things from scratch and care about clean code that just works — no bloat, no fuss.
+      </p>
     </div>
   </section>
 
-  <!-- WORK -->
+  <!-- ===== WORK ===== -->
   <section class="section section-accent" id="work">
     <div class="container">
       <span class="section-label light reveal">Work</span>
-      <h2 class="section-heading light reveal" style="transition-delay:0.1s">Things I've built,<br>designed & created.</h2>
+
+      <h2 class="section-heading light reveal" style="transition-delay: 0.1s">
+        Things I've built,<br>designed &amp; created.
+      </h2>
+
       <div class="work-links">
-        <a href="https://figma.com" target="_blank" rel="noopener" class="work-card reveal" style="transition-delay:0.1s">
+
+        <!-- Figma -->
+        <a href="https://figma.com" target="_blank" rel="noopener"
+           class="work-card reveal" style="transition-delay: 0.1s">
           <div class="work-icon">
             <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 28.5C19 25.6 21.4 23.3 24.3 23.3C27.2 23.3 29.6 25.6 29.6 28.5C29.6 31.4 27.2 33.7 24.3 33.7C21.4 33.7 19 31.4 19 28.5Z" fill="currentColor"/>
@@ -81,77 +104,133 @@
           <p class="work-sub">UI/UX Design</p>
           <span class="work-arrow">↗</span>
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener" class="work-card reveal" style="transition-delay:0.2s">
+
+        <!-- GitHub -->
+        <a href="https://github.com" target="_blank" rel="noopener"
+           class="work-card reveal" style="transition-delay: 0.2s">
           <div class="work-icon">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57
+                       0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695
+                       -.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99
+                       .105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225
+                       -.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405
+                       c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225
+                       0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3
+                       0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
           </div>
           <p class="work-name">GitHub</p>
-          <p class="work-sub">Dev & Systems</p>
+          <p class="work-sub">Dev &amp; Systems</p>
           <span class="work-arrow">↗</span>
         </a>
+
       </div>
     </div>
   </section>
 
-  <!-- SKILLS / SERVICES -->
+  <!-- ===== SKILLS / SERVICES ===== -->
   <section class="section section-services" id="skills">
     <div class="container">
       <span class="section-label reveal">What I do</span>
+
       <div class="services">
-        <div class="service reveal" style="transition-delay:0.05s">
+
+        <div class="service reveal" style="transition-delay: 0.05s">
           <span class="service-eyebrow">Frontend &amp; backend</span>
           <h3 class="service-title">Web Development</h3>
-          <p class="service-desc">Sites and apps built from the ground up — clean on the front, solid on the back. PHP, JavaScript and everything in between.</p>
+          <p class="service-desc">
+            Sites and apps built from the ground up — clean on the front, solid on the back.
+            PHP, JavaScript and everything in between.
+          </p>
           <a href="#contact" class="service-link">Let's talk →</a>
         </div>
-        <div class="service reveal" style="transition-delay:0.18s">
+
+        <div class="service reveal" style="transition-delay: 0.18s">
           <span class="service-eyebrow">Databases &amp; APIs</span>
           <h3 class="service-title">Systems</h3>
-          <p class="service-desc">The parts you don't see — databases, APIs and the logic that keeps everything talking to each other.</p>
+          <p class="service-desc">
+            The parts you don't see — databases, APIs and the logic that keeps
+            everything talking to each other.
+          </p>
           <a href="#contact" class="service-link">Let's talk →</a>
         </div>
-        <div class="service reveal" style="transition-delay:0.31s">
+
+        <div class="service reveal" style="transition-delay: 0.31s">
           <span class="service-eyebrow">Hardware &amp; sensors</span>
           <h3 class="service-title">IoT</h3>
-          <p class="service-desc">Where code meets the real world. Arduino, Raspberry Pi and sensors wired into things that actually do something.</p>
+          <p class="service-desc">
+            Where code meets the real world. Arduino, Raspberry Pi and sensors
+            wired into things that actually do something.
+          </p>
           <a href="#contact" class="service-link">Let's talk →</a>
         </div>
-        <div class="service reveal" style="transition-delay:0.44s">
+
+        <div class="service reveal" style="transition-delay: 0.44s">
           <span class="service-eyebrow">Design &amp; tools</span>
           <h3 class="service-title">Interfaces</h3>
-          <p class="service-desc">Designing in Figma, shipping in code. Interfaces that feel right and get out of the way.</p>
+          <p class="service-desc">
+            Designing in Figma, shipping in code. Interfaces that feel right
+            and get out of the way.
+          </p>
           <a href="#contact" class="service-link">Let's talk →</a>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ===== CONTACT ===== -->
   <section class="section section-contact" id="contact">
     <div class="container contact-container">
       <span class="section-label reveal">Contact</span>
-      <h2 class="contact-title reveal" style="transition-delay:0.1s">Let's work<br><em>together.</em></h2>
-      <p class="contact-sub reveal" style="transition-delay:0.2s">Have a project in mind? I'd love to hear about it.</p>
-      <div class="contact-btns reveal" style="transition-delay:0.3s">
+
+      <h2 class="contact-title reveal" style="transition-delay: 0.1s">
+        Let's work<br><em>together.</em>
+      </h2>
+
+      <p class="contact-sub reveal" style="transition-delay: 0.2s">
+        Have a project in mind? I'd love to hear about it.
+      </p>
+
+      <div class="contact-btns reveal" style="transition-delay: 0.3s">
+
         <a href="mailto:nurnilamrodzuan@gmail.com" class="btn-outline btn-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="m2 7 10 6 10-6"/>
           </svg>
           Email
         </a>
-        <a href="https://wa.me/601136763359" target="_blank" rel="noopener" class="btn-solid btn-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 01-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 01-1.44-5.01c0-5.18 4.22-9.4 9.41-9.4 2.51 0 4.87.98 6.64 2.76a9.32 9.32 0 012.75 6.65c-.01 5.18-4.22 9.4-9.4 9.4zm8-17.4A11.32 11.32 0 0012.04.5C5.83.5.78 5.55.78 11.76c0 1.99.52 3.93 1.51 5.64L.68 23.5l6.25-1.64a11.25 11.25 0 005.1 1.3h.01c6.21 0 11.26-5.05 11.26-11.26 0-3.01-1.17-5.84-3.3-7.97z"/>
+
+        <a href="https://wa.me/601136763359" target="_blank" rel="noopener"
+           class="btn-solid btn-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"
+               xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16
+                     -.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07
+                     -.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52
+                     -.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37
+                     -.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49
+                     .71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42
+                     .25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z
+                     M12.04 21.5h-.01a9.4 9.4 0 01-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36
+                     a9.38 9.38 0 01-1.44-5.01c0-5.18 4.22-9.4 9.41-9.4 2.51 0 4.87.98 6.64 2.76
+                     a9.32 9.32 0 012.75 6.65c-.01 5.18-4.22 9.4-9.4 9.4z
+                     m8-17.4A11.32 11.32 0 0012.04.5C5.83.5.78 5.55.78 11.76c0 1.99.52 3.93 1.51 5.64
+                     L.68 23.5l6.25-1.64a11.25 11.25 0 005.1 1.3h.01c6.21 0 11.26-5.05 11.26-11.26
+                     0-3.01-1.17-5.84-3.3-7.97z"/>
           </svg>
           WhatsApp
         </a>
+
       </div>
     </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <p>© <span id="year"></span> nilamdothecode — Made in Malaysia.</p>
   </footer>
