@@ -1,21 +1,30 @@
-// ===== COLOR SWITCHER =====
-const swatches = document.querySelectorAll('.swatch');
+// ===== THEME TOGGLE (light / dark) =====
 const html = document.documentElement;
-const savedColor = localStorage.getItem('accentColor') || 'sand';
+const themeToggle = document.getElementById('theme-toggle');
 
-html.setAttribute('data-color', savedColor);
-document.querySelector(`[data-color="${savedColor}"]`)?.classList.add('active');
+function getSavedTheme() {
+  try {
+    return localStorage.getItem('theme');
+  } catch (e) {
+    return null;
+  }
+}
 
-swatches.forEach(s => {
-  s.addEventListener('click', () => {
-    const color = s.dataset.color;
+function saveTheme(theme) {
+  try {
+    localStorage.setItem('theme', theme);
+  } catch (e) {
+    // localStorage blocked (e.g. some browsers on file://) — ignore, theme still applies for this session
+  }
+}
 
-    html.setAttribute('data-color', color);
-    localStorage.setItem('accentColor', color);
+const savedTheme = getSavedTheme() || 'light';
+html.setAttribute('data-theme', savedTheme);
 
-    swatches.forEach(sw => sw.classList.remove('active'));
-    s.classList.add('active');
-  });
+themeToggle.addEventListener('click', () => {
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  saveTheme(next);
 });
 
 // ===== NAVBAR SCROLL =====

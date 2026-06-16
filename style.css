@@ -6,9 +6,9 @@
   padding: 0;
 }
 
-/* ===== COLOR THEMES ===== */
+/* ===== LIGHT / DARK THEMES ===== */
 :root,
-[data-color="sand"] {
+[data-theme="light"] {
   --accent: #1B7A5A;
   --accent2: #FFE034;
   --accent-text: #ffffff;
@@ -22,32 +22,18 @@
   --hero-bg: #1B7A5A;
 }
 
-[data-color="orange"] {
-  --accent: #FF5C00;
+[data-theme="dark"] {
+  --accent: #34C285;
   --accent2: #FFE034;
   --accent-text: #ffffff;
-  --bg: #FFF5F0;
-  --bg2: #FFE8DC;
-  --text: #1a1a1a;
-  --text-muted: #8a4a30;
-  --card-bg: #ffffff;
-  --border: rgba(255, 92, 0, 0.12);
-  --nav-bg: rgba(255, 245, 240, 0.95);
-  --hero-bg: #FF5C00;
-}
-
-[data-color="green"] {
-  --accent: #1B7A5A;
-  --accent2: #FFE034;
-  --accent-text: #ffffff;
-  --bg: #F0FAF5;
-  --bg2: #D6F0E5;
-  --text: #1a1a1a;
-  --text-muted: #3a6a55;
-  --card-bg: #ffffff;
-  --border: rgba(27, 122, 90, 0.12);
-  --nav-bg: rgba(240, 250, 245, 0.95);
-  --hero-bg: #1B7A5A;
+  --bg: #12150F;
+  --bg2: #1A1E16;
+  --text: #F0EDE4;
+  --text-muted: #9aa395;
+  --card-bg: #1A1E16;
+  --border: rgba(255, 255, 255, 0.1);
+  --nav-bg: rgba(18, 21, 15, 0.95);
+  --hero-bg: #23A56F;
 }
 
 html {
@@ -164,34 +150,47 @@ em {
   background: #fff;
 }
 
-.navbar:not(.scrolled) .swatch.active {
-  border-color: #fff;
+.navbar:not(.scrolled) .theme-toggle {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* COLOR SWITCHER */
-.color-switcher {
+/* THEME TOGGLE */
+.theme-toggle {
   display: flex;
   align-items: center;
-  gap: 7px;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s, border-color 0.3s, color 0.3s, background 0.3s;
 }
 
-.swatch {
+.theme-toggle:hover {
+  transform: scale(1.1);
+  border-color: var(--accent);
+}
+
+.theme-toggle svg {
   width: 18px;
   height: 18px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  padding: 0;
-  cursor: pointer;
-  transition: transform 0.2s, border-color 0.2s;
 }
 
-.swatch:hover {
-  transform: scale(1.2);
+.theme-toggle .icon-moon {
+  display: none;
 }
 
-.swatch.active {
-  border-color: var(--text);
-  transform: scale(1.15);
+[data-theme="dark"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: block;
 }
 
 /* HAMBURGER */
@@ -1053,12 +1052,8 @@ em {
     border-bottom: none;
   }
 
-  .color-switcher {
-    gap: 5px;
-  }
-
-  .swatch {
-    width: 16px;
-    height: 16px;
+  .theme-toggle {
+    width: 34px;
+    height: 34px;
   }
 }

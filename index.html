@@ -24,11 +24,19 @@
         <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
       </ul>
 
-      <div class="color-switcher" id="color-switcher">
-        <button class="swatch active" data-color="sand"   style="background:#FAF8F3; border:1.5px solid #ccc" aria-label="White Sand"></button>
-        <button class="swatch"        data-color="orange" style="background:#FF5C00"                          aria-label="Orange"></button>
-        <button class="swatch"        data-color="green"  style="background:#1B7A5A"                          aria-label="Green"></button>
-      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span>
@@ -142,7 +150,7 @@
       <div class="case-grid">
 
         <!-- WarungGo -->
-          <a href="cases/warunggo.html" class="case-card reveal" style="transition-delay: 0.1s">
+        <a href="cases/warunggo.html" class="case-card reveal" style="transition-delay: 0.1s">
           <div class="case-cover">
             <span class="case-cover-name">WarungGo</span>
           </div>
