@@ -6,6 +6,82 @@
   padding: 0;
 }
 
+/* ===== PAGE LOADER ===== */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #583E11;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-box {
+  position: relative;
+  width: 5.4em;
+  height: 5.4em;
+  font-size: 16px;
+  background-color: #583E11;
+}
+
+.hill {
+  position: absolute;
+  width: 7.1em;
+  height: 7.1em;
+  top: 1.7em;
+  left: 1.7em;
+  background-color: transparent;
+  border-left: 0.25em solid #EECA13;
+  transform: rotate(45deg);
+}
+
+.hill::after {
+  content: '';
+  position: absolute;
+  width: 7.1em;
+  height: 7.1em;
+  left: 0;
+  background-color: #583E11;
+}
+
+.box {
+  position: absolute;
+  left: 0;
+  bottom: -0.1em;
+  width: 1em;
+  height: 1em;
+  background-color: transparent;
+  border: 0.25em solid #EECA13;
+  border-radius: 15%;
+  transform: translate(0, -1em) rotate(-45deg);
+  animation: push 2.5s cubic-bezier(0.79, 0, 0.47, 0.97) infinite;
+}
+
+@keyframes push {
+  0%   { transform: translate(0, -1em) rotate(-45deg); }
+  5%   { transform: translate(0, -1em) rotate(-50deg); }
+  20%  { transform: translate(1em, -2em) rotate(47deg); }
+  25%  { transform: translate(1em, -2em) rotate(45deg); }
+  30%  { transform: translate(1em, -2em) rotate(40deg); }
+  45%  { transform: translate(2em, -3em) rotate(137deg); }
+  50%  { transform: translate(2em, -3em) rotate(135deg); }
+  55%  { transform: translate(2em, -3em) rotate(130deg); }
+  70%  { transform: translate(3em, -4em) rotate(217deg); }
+  75%  { transform: translate(3em, -4em) rotate(220deg); }
+  100% { transform: translate(0, -1em) rotate(-225deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .box { animation: none; }
+}
+
 /* ===== LIGHT / DARK THEMES ===== */
 :root,
 [data-theme="light"] {
@@ -134,12 +210,12 @@ em {
 }
 
 .navbar:not(.scrolled) .nav-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .navbar:not(.scrolled) .nav-link:hover,
 .navbar:not(.scrolled) .nav-link.active {
-  color: #fff;
+  color: var(--accent2);
 }
 
 .navbar:not(.scrolled) .nav-link::after {

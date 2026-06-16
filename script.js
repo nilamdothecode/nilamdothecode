@@ -1,3 +1,26 @@
+// ===== PAGE LOADER =====
+(function () {
+  const loader = document.getElementById('page-loader');
+  if (!loader) return;
+
+  const start = Date.now();
+  const minVisible = 2800; // satu kitaran penuh animasi = 2.5s, jadi tunggu ~2.8s supaya nampak 4 flip habis
+
+  function hideLoader() {
+    const elapsed = Date.now() - start;
+    const wait = Math.max(0, minVisible - elapsed);
+    setTimeout(() => {
+      loader.classList.add('hidden');
+      document.body.style.overflow = '';
+    }, wait);
+  }
+
+  document.body.style.overflow = 'hidden'; // kunci scroll masa loading
+  window.addEventListener('load', hideLoader);
+  // fallback: kalau 'load' tak cetus dalam 6s, sorok juga supaya tak tersangkut
+  setTimeout(hideLoader, 6000);
+})();
+
 // ===== THEME TOGGLE (light / dark) =====
 const html = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
